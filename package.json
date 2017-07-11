@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "name": "react-native-sample",
+  "version": "1.0.0",
+  "description": "react react-dom ",
+  "main": "index.js",
+  "repository": "https://github.com/zhangmingkai4315/react-native-sample.git",
+  "author": "zhangmingkai4315 <zhangmingkai19892013@gmail.com>",
+  "license": "MIT"
+}

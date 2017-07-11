@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+
+    <div id="root"></div>
+
+    <script src="node_modules/react/dist/react.min.js"></script>
+    <script src="node_modules/react-dom/dist/react-dom.min.js"></script>
+    <script>
+      const h1 = React.createElement('h1',null,"hello")
+
+      const UserList = React.createClass({
+          displayName:"UserList",
+          render(){
+              return React.createElement('div',null,
+              React.createElement('h1',null,this.props.name),
+              React.createElement('h5',null,this.props.age))
+          }
+      })
+
+      class UserListComponent extends React.Component{
+        render(){
+              return React.createElement('div',null,
+              React.createElement('h1',null,this.props.name),
+              React.createElement('h5',null,this.props.age))            
+        }
+      }
+
+      const UserListStatelessFun = props =>( React.createElement('div',null,
+              React.createElement('h1',null,props.name),
+              React.createElement('h5',null,props.age)))    
+
+      const user = React.createElement(UserListStatelessFun,{name:'mike',age:29},null)
+
+      ReactDOM.render(user,document.getElementById('root'))
+    </script> 
+    </body>
+</html>
