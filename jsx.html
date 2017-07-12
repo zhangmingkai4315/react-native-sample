@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <div id="root"></div>
+
+    <script src="node_modules/react/dist/react.min.js"></script>
+    <script src="node_modules/react-dom/dist/react-dom.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+      const names = ['mike','alice','bob']
+      const Menu = ({name})=>(
+          <article>
+              <li>{name}</li>
+          </article>
+      )
+      const Department = ({title,names})=>{
+          return (<div><h1>{title}</h1>
+          {names.map((name,i)=>
+              <Menu key={i} name={name}/>
+          )}</div>)
+      }
+      ReactDOM.render(<Department title="sre" names={names}/>,document.getElementById('root'))
+    </script> 
+    </body>
+</html>
